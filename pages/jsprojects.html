@@ -4,12 +4,17 @@
         <meta charset = "utf-8">
         <title>JS Foundation Projects</title>
         <script src = "rockpaperscissors.js" defer></script>
+        <script src = "etchasketch.js" defer></script>
         <style>
-            .game {
+            .games,.game {
                 display: flex; 
                 flex-direction: column; 
                 justify-content: center; 
                 align-items: center;
+            }
+            .games {
+                gap: 40px;
+                margin: 40px;
             }
             #rps_selections {
                 display: flex;
@@ -28,10 +33,17 @@
             .gestureDisplay {
                 flex: 1 1 auto;
             }
+            #easCanvas {
+                margin-top: 20px;
+                height : 960px;
+                width : 960px;
+                border: 4px solid black;
+                flex: 0 1 auto;
+            }
         </style>
     </header>
     <body>
-        <div class = "game">
+        <div class = "games">
             <div class = "game", id = "rps">
                 <h1>Rock Paper Scissors</h1>
                 <div id = "rps_selections">
@@ -55,6 +67,17 @@
                 <p id = "rps_message"></p>
                 <h2 id = "rps_scores"></h2>
                 <button id = "rps_resetButton"> RESET</button>
+            </div>
+            <div class = "game", id = "eas">
+                <h1>Etch-a-Sketch</h1>
+                <div id = "easControl">
+                    <button id = "easResetButton"> Clear</button>
+                    <button id = "easSizeButton">Change Size</button>
+                </div>
+
+                <div id = "easCanvas">
+
+                </div>
             </div>
         </div>
     </body>
