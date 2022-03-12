@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <header>
+        <meta charset = "utf-8">
+        <title>JS Foundation Projects RPS</title>
+        <script src = "rockpaperscissors.js" defer></script>
+        <link rel = "stylesheet" href = "style.css">
+    </header>
+    <body>
+        <div class = "games">
+            <div class = "game" id = "rps">
+                <h1>Rock Paper Scissors</h1>
+                <div id = "rps_selections">
+                    <div class = "player" id = "player_display_box">
+                        <a class = "gestureDisplay" id = "player_display">?</a>
+                    </div>
+                    <div class = "player">
+                        <h1>VS</h1>
+                    </div>
+                    <div class = "player" id = "computer_display_box">
+                         <a class = "gestureDisplay" id = "computer_display">?</a>
+                    </div>
+                </div>
+                <p>Your Gesture Will Be</p>
+                <div id = "button_box" style = "display: flex">
+                    <button class = "rps_button" id = "rock">ROCK</button>
+                    <button class = "rps_button" id = "paper">PAPAER</button>
+                    <button class = "rps_button" id = "scissors">SCISSORS</button>
+                </div>
+
+                <p id = "rps_message"></p>
+                <h2 id = "rps_scores"></h2>
+                <button id = "rps_resetButton"> RESET</button>
+            </div>
+            
+        </div>
+    </body>
+</html>

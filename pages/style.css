@@ -1,0 +1,165 @@
+.games,.game {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+}
+.games {
+    gap: 40px;
+    margin: 40px;
+}
+#rps_selections {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    align-items: center;
+}
+.player {
+    display: flex;
+    width : 100px;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.gestureDisplay {
+    flex: 1 1 auto;
+}
+
+#easCanvas {
+    margin-top: 20px;
+    height : 960px;
+    width : 960px;
+    border: 4px solid black;
+    flex: 0 1 auto;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    background-color:goldenrod; 
+    width : 500px; 
+    flex: 1 1 auto;
+    border-radius: 4px;
+}
+
+#calculatorPad {
+    align-self: stretch;
+    height: 300px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+#calcButton1 {
+    grid-row-start: 4;
+    grid-column-start: 1;
+}
+
+#calcButton2 {
+    grid-row-start: 4;
+    grid-column-start: 2;
+}
+
+#calcButton3 {
+    grid-row-start: 4;
+    grid-column-start: 3;
+}
+
+#calcButton4 {
+    grid-row-start: 3;
+    grid-column-start: 1;
+}
+
+#calcButton5 {
+    grid-row-start: 3;
+    grid-column-start: 2;
+}
+
+#calcButton6 {
+    grid-row-start: 3;
+    grid-column-start: 3;
+}
+
+#calcButton7 {
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+
+#calcButton8 {
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+
+#calcButton9 {
+    grid-row-start: 2;
+    grid-column-start: 3;
+}
+
+#calcButton0 {
+    grid-row-start: 5;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
+
+#calcButtonDot {
+    grid-row-start: 5;
+    grid-column-start: 3;
+}
+
+#calcButtonClear {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
+
+#calcButtonEqual {
+    grid-row-start: 4;
+    grid-row-end: span 2;
+    grid-column-start:4;
+}
+
+#calcDisplayBox {
+    width : 80%;
+    height: 160px; 
+    background-color:darkblue; 
+    align-self: center;
+    margin-top: 20px;
+    padding: 8px ;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+#calcSecondaryDisplayBox {
+    height: 21px;
+    flex: 1 1 auto;
+    background-color: darkgrey;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding : 5px;
+}
+
+#calcMainDisplayBox {
+    height: 42px;
+    flex: 1 1 auto;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding : 5px;
+}
+
+#calcMainDisplay {
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.calcButtonClass {
+    border-radius: 4px;
+}

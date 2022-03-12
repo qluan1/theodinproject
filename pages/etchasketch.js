@@ -1,15 +1,15 @@
-const easCanvas = document.querySelector("#easCanvas");
-const easResetButton = document.querySelector("#easResetButton");
+const easCanvas = document.querySelector('#easCanvas');
+const easResetButton = document.querySelector('#easResetButton');
 const DEFAULT_CANVAS_SIZE = 16;
 
 let mouseLeftPressed = false;
 let canvasSizeCurrent = DEFAULT_CANVAS_SIZE;
 
-document.body.addEventListener("mousedown", () => {mouseLeftPressed = true;});
-document.body.addEventListener("mouseup", () => {mouseLeftPressed = false;}); 
+document.body.addEventListener('mousedown', () => {mouseLeftPressed = true;});
+document.body.addEventListener('mouseup', () => {mouseLeftPressed = false;}); 
 
 function activateGrid (event) {
-    if (mouseLeftPressed || event.type == "mousedown") {
+    if (mouseLeftPressed || event.type == 'mousedown') {
         let o = event.currentTarget.style.opacity;
         o = parseFloat(o);
         event.currentTarget.style.opacity = 0.2 + o;
@@ -17,8 +17,8 @@ function activateGrid (event) {
 }
 
 function initializeGrid (a) {
-    a.addEventListener("mouseover", activateGrid);
-    a.addEventListener("mousedown", activateGrid);
+    a.addEventListener('mouseover', activateGrid);
+    a.addEventListener('mousedown', activateGrid);
 }
 
 function clearCanvas () {
@@ -35,8 +35,8 @@ function initializeCanvas(l) {
 
     for (let i = 0; i < l*l; i++){
         let gridItem = document.createElement('div');
-        gridItem.style.backgroundColor = "black";
-        gridItem.style.opacity = "0";
+        gridItem.style.backgroundColor = 'black';
+        gridItem.style.opacity = '0';
         initializeGrid(gridItem);
         easCanvas.appendChild(gridItem);    
     }
@@ -47,7 +47,7 @@ function initializeCanvas(l) {
     for (let i = 0; i < l-1; i++){
         columnSetting += ` ${gridWidth}px`;
     }
-    easCanvas.style.display = "grid";
+    easCanvas.style.display = 'grid';
     easCanvas.style.gridTemplateColumns = columnSetting;
 }
 
@@ -57,7 +57,7 @@ easResetButton.addEventListener('click', ()=>{
 })
 
 easSizeButton.addEventListener('click', ()=>{
-    let s = prompt("Enter an integer between 16 and 96");
+    let s = prompt('Enter an integer between 16 and 96');
     let l = parseInt(s, 10);
     if (isNaN(l)) {
         alert(`could not recognize ${s}`);
