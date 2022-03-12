@@ -80,17 +80,18 @@ function formatNumber(res) {
     if (res == null) {
         return '';
     }
-    res = res.toPrecision(NUMSIGDIG);
-    let exp = '';
-    if (res.indexOf('e') != -1){
-        res, exp = res.split('e');
-        exp = 'e' + exp;
-    }
     let sign = '';
     if (res < 0) {
         sign = '-';
         res = res*(-1);
     }
+    res = res.toPrecision(NUMSIGDIG).toString();
+    let exp = '';
+    if (res.indexOf('e') != -1){
+        res, exp = res.split('e');
+        exp = 'e' + exp;
+    }
+
     // remove trailing
     let dot = (res.indexOf('.') != -1);
     while ((dot) && (res.length > 1) && ((res.charAt(res.length-1) == '0')||(res.charAt(res.length-1) == '.'))){
