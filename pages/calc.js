@@ -267,7 +267,7 @@ document.querySelector(calcButtonNamePrefix + 'Minus').addEventListener('click',
     }
     if (isActiveNumberNull()){
         if (calcInputMode){
-            initialize();
+            initializeActiveNumber();
             calcSign = -1;
         } else if (calcOp == '=') {
             calcOp = '-';
