@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title>Sign-up Form</title>
+        <link rel="stylesheet" href="signupstyle.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <script src="signup.js" defer></script>
+    </head>
+    <body>
+        <div class = "signup-page">
+            <div class = "card-container">
+                <img class="card-image" src="../img/tang.jpg" alt="cat on printer">
+                <div class = "card-body">
+                    <div class = "card-logo-container">
+                        <img class="card-logo" src="../img/tanlogo.png" alt="logo of tangelo">
+                    </div>
+                    <div class = "card-name">
+                        TANGELO
+                    </div>
+                </div>
+            </div>
+            
+
+
+            <form class="signup-form" action = "http://httpbin.org/post" method="post">
+                <div class = "form-text">
+                    <p>This is not a real online service! 
+                        You know you need something like this in your life to help you realize your deepest dreams. 
+                        Sign up <em>now</em> to get started.
+                    </p>
+                    <p>
+                        You <em>know</em> you want to.
+                    </p>
+                </div>
+                <div class = "form-input">
+
+                    <div class = "form-input-title"> Let's do this! </div>
+                    
+                    <div class="form-label-input">
+                        <label class="required" for="firstname">
+                            FIRST NAME
+                        </label>
+                        <input name="firstname" id="firstname" type="text" pattern="^\S*$" required>
+                    </div>
+                
+                    <div class="form-label-input">
+                        <label class="required" for="lastname">
+                            LAST NAME
+                        </label>
+                        <input name="lastname" id="lastname" required type="text" pattern="^\S*$" >
+                    </div>
+                
+                    <div class="form-label-input">
+                        <label class="required" for="email">
+                            EMAIL
+                        </label>
+                        <input name="email" type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-label-input">
+                        <label for="phone">
+                            PHONE NUMBER
+                        </label>
+                        <input name="phone" type="tel" id="phone">
+                    </div>
+                    
+                    <div class="form-label-input">
+                        <label class="required" for="password">
+                            PASSWORD
+                        </label>
+                        <input name="password" type="password" id="password" required>
+                        <span class = "password-message"></span>
+                    </div>
+                    
+                    <div class="form-label-input">
+                        <label class="required" for="confirmpw">
+                            CONFIRM PASSWORD
+                        </label>
+                        <input type="password" id="confirmpw" required>
+                    </div>
+                    
+                </div>
+                <div class = "form-submit">
+                    <button type="submit">
+                        Create Account
+                    </button>
+
+                    <p>Already have an account? <a href="" >Log in</a></p>
+                </div>
+            </form>
+
+
+        </div>
+
+    </body>
+</html>

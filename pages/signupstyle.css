@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+.signup-page {
+    display:flex;
+    align-items: stretch;
+    min-height: 100vh;
+
+}
+
+
+.card-container {
+    min-width: 400px;
+    width: 500px;
+    position:relative;
+    flex: 1 1 auto;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    z-index: -1;
+}
+
+.card-body {
+    position: absolute;
+    width: 100%;
+    top: 70%;
+    background: black;
+    opacity: 0.6;
+    display:flex;
+    justify-content: center;
+    gap:20px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.card-logo-container {
+    max-height: 100px;
+    max-width: 100px;
+    flex: 0 1 auto;
+}
+
+.card-logo {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.card-name {
+    color:white;
+    font-size:xx-large;
+    font-family: 'Lobster', cursive;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.signup-form {
+    width : 800px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:azure;
+}
+
+.form-text {
+    padding-left: 30px;
+    padding-right: 50px;
+    font-size: x-large;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form-input {
+    padding: 30px 30px 30px 50px;
+    background-color: beige;
+    box-shadow: 0 0 10px 0 black;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
+.form-input-title{
+    font-size: x-large;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 1;
+}
+
+.form-label-input{
+    font-size:small;
+    font-weight: 300;
+    color:grey;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+input {
+    margin-top: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+    position:relative;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+}
+
+input:invalid {
+    box-shadow: 0 0 5px red;
+    border: 1px solid red;
+}
+
+input:valid {
+    box-shadow: 0 0 5px green;
+    border: 1px solid green;    
+}
+
+label.required::before {
+    content:"*";
+}
+
+.password-message {
+    color: red;
+    height: 1em;
+}
+
+.form-submit {
+    padding: 40px 30px 0px 50px;
+}
