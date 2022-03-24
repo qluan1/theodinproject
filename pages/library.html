@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="library.css">
+        <title>Library App</title>
+        <script src="library.js" defer> </script>
+    </head>
+    <body>
+
+        <div class="header">
+            <span>My Book Collection</span>
+        </div>
+
+        <div class="card-container">
+            <div class="card" id="add-card">
+                <div>+</div>
+                <div>Add New Book</div>
+            </div>
+        </div>
+
+        <!--
+        <button id="refresh" onclick="refreshCardContainer()"> Refresh </button>
+        -->
+
+        <div class="modal" id="modal">
+            <form class="form-new-book">
+                <h2>Add a New Book</h2>
+
+                <label for="title">Book Title:</label>
+                <input type="text" id="title">
+                <label for="author">Author Name:</label>
+                <input type="text" id="author">
+
+                <div class="form-item">
+                    <label>Have you read it?</label>
+                    <input type="radio" id="form-yes" name="have-read" value="Yes">
+                    <label for="form-yes">Yes</label>
+                    <input type="radio" id="form-no" name="have-read" value="No" checked>
+                    <label for="form-no">No</label>
+                </div>
+                <div class="form-item">
+                    <input type="button" class="form-add" onclick="addNewBook()" value = "add">
+                    <input type="button" class="form-cancel" onclick="closeForm()" value = "cancel">
+                    <span class="form-error-message"></span>
+                </div>
+            </form>
+            
+
+            </div>
+        </div>
+    </body>
+</html>
