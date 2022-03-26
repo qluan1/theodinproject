@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="tictactoe.css">
+        <script src="tictactoe.js" defer></script>
+    </head>
+
+    <body>
+        <div class="control">
+            <div class="player-config">
+                <input type="text" id="player1-name" value="player 1">
+                <label>
+                    <input type="radio" value="player" id="player1-player" name="player1-control" checked>
+                    Player control
+                </label>
+                <label>
+                    <input type="radio" value="aiEasy" id="player1-ai-easy" name="player1-control">
+                    Ai control (Easy)
+                </label>
+                <label>
+                    <input type="radio" value="aiHard" id="player1-ai-hard" name="player1-control">
+                    Ai control (Hard)
+                </label>
+            </div>
+            <div class="buttons-container">
+                <input type="button" id="start-game-button" value="Start Game" onclick="start()">
+                <input type="button" id="reset-game-button" value="Reset Game" onclick="game.resetGame()">
+            </div>
+            <div class="player-config">
+                <input type="text" id="player2-name" value="player 2">
+                <label>
+                    <input type="radio" value="player" id="player2-player" name="player2-control" checked>
+                    Player control
+                </label>
+                <label>
+                    <input type="radio" value="aiEasy" id="player2-ai-easy" name="player2-control">
+                    Ai control (Easy)
+                </label>
+                <label>
+                    <input type="radio" value="aiHard" id="player2-ai-hard" name="player2-control">
+                    Ai control (Hard)
+                </label>
+            </div>
+        </div>
+        <div id="game-message"></div>
+        <div id="game-board"></div>
+    </body>
+</html>
